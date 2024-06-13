@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Умный Дом</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="counters">
+            <button class="counters-button" onclick="toggleCountersModal()">Счётчики</button>
+            <button class="add-device-button" onclick="toggleAddDeviceModal()">+</button>
+        </div>
+        <div class="profile">
+            <img src="profile.jpg" alt="Профиль" onclick="toggleProfileMenu()">
+            <div class="profile-menu" id="profileMenu">
+                <a href="#">Изменить профиль</a>
+                <a href="#">Настройки</a>
+                <a href="#">Выход</a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="device">
+            <img src="lightbulb.png" alt="Лампочка">
+            <h3>Лампочка</h3>
+            <label class="toggle-switch">
+                <input type="checkbox" id="light-switch" onchange="toggleLight()">
+                <span class="slider-switch"></span>
+            </label>
+        </div>
+        <div class="device">
+            <img src="thermostat.png" alt="Термостат">
+            <h3>Термостат</h3>
+            <input type="range" class="slider" id="thermostat-slider" min="0" max="30" value="20"
+                oninput="this.nextElementSibling.value = this.value">
+            <output>20</output>°C
+        </div>
+        <div class="device">
+            <img src="fan.png" alt="Вентилятор">
+            <h3>Вентилятор</h3>
+            <select id="fan-speed" onchange="changeFanSpeed()">
+                <option value="0">Выключено</option>
+                <option value="1">Скорость 1</option>
+                <option value="2">Скорость 2</option>
+                <option value="3">Скорость 3</option>
+            </select>
+        </div>
+        <div class="device">
+            <img src="speaker.png" alt="Колонка">
+            <h3>Колонка</h3>
+            <label class="toggle-switch">
+                <input type="checkbox" id="speaker-switch" onchange="toggleSpeaker()">
+                <span class="slider-switch"></span>
+            </label>
+        </div>
+        <!-- Добавьте другие устройства здесь -->
+    </div>
+    <div class="counters-modal" id="countersModal">
+        <button class="close" onclick="toggleCountersModal()">&times;</button>
+        <h2>Счётчики и графики</h2>
+        <div class="chart">
+            График 1
+        </div>
+        <div class="chart">
+            График 2
+        </div>
+        <!-- Добавьте другие графики здесь -->
+    </div>
+    <div class="add-device-modal" id="addDeviceModal">
+        <button class="close" onclick="toggleAddDeviceModal()">&times;</button>
+        <h2>Добавить новое устройство</h2>
+        <form>
+            <label for="device-name">Название устройства:</label>
+            <input type="text" id="device-name" name="device-name" required><br><br>
+            <label for="device-type">Тип устройства:</label>
+            <select id="device-type" name="device-type" required>
+                <option value="light">Лампочка</option>
+                <option value="thermostat">Термостат</option>
+                <option value="fan">Вентилятор</option>
+                <option value="speaker">Колонка</option>
+            </select><br><br>
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
+
+    <div class="bluetooth-modal" id="bluetoothModal">
+        <button class="close" onclick="toggleBluetoothModal()">&times;</button>
+        <h2>Bluetooth Соединение</h2>
+        <div class="bluetooth-info">
+            <p>Статус: <span id="bluetoothStatus">Не подключено</span></p>
+            <button onclick="connectBluetooth()">Подключить</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script> <!-- Подключаем скрипт -->
+</body>
+
+</html> 

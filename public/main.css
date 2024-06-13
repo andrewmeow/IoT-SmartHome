@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+header button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.rooms,
+.devices,
+.counters,
+.settings {
+    display: none;
+    padding: 20px;
+}
+
+.rooms.show,
+.devices.show,
+.counters.show,
+.settings.show {
+    display: block;
+}
+
+
+.rooms {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.rooms h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.rooms ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.rooms li {
+    margin-bottom: 10px;
+}
+
+.rooms form {
+    display: flex;
+}
+
+.rooms input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.rooms button[type="submit"] {
+    padding: 8px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.rooms button[type="submit"]:hover {
+    background-color: #218838;
+}

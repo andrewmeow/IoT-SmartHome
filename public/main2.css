@@ -1,0 +1,171 @@
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f8f9fa;
+            padding: 10px;
+        }
+
+        header button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 20px 70px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        header button.active {
+            background-color: #0056b3;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.show {
+            display: block;
+            padding: 20px;
+        }
+
+        .rooms {
+            padding: 20px;
+        }
+
+        .rooms h2 {
+            margin-bottom: 20px;
+        }
+
+        #roomList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #roomList li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #roomList li:last-child {
+            border-bottom: none;
+        }
+
+        #roomList li button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #addRoomForm {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        #addRoomForm input {
+            flex: 1;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #addRoomForm button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+
+        .devices {
+            padding: 20px;
+        }
+
+        .devices h2 {
+            margin-bottom: 20px;
+        }
+
+        #deviceList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #deviceList li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #deviceList li:last-child {
+            border-bottom: none;
+        }
+
+        #deviceList li button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #addDeviceForm {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        #addDeviceForm input {
+            flex: 1;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+            .device-container {
+                
+                display: flex;
+                /* Отображение элементов в ряд */
+                flex-wrap: wrap;
+                /* Перенос элементов на новую строку при нехватке места */
+                gap: 20px;
+                /* Расстояние между элементами в ряду */
+                justify-content: center;
+                /* Выравнивание элементов по центру по горизонтали */
+                align-items: center;
+                /* Выравнивание элементов по центру по вертикали */
+            }
+    
+            .device-block {
+                
+                /* Стили для каждого блока устройства */
+                width: 200px;
+                /* Ширина блока устройства */
+                height: auto;
+                /* Высота блока устройства */
+            }
+
+        #addDeviceForm button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }

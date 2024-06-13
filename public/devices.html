@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./devscripts.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Smart Home Dashboard</h1>
+        <div class="section">
+            <h2>Device Controls</h2>
+            <div class="device-control">
+                <label for="lightSwitch">Light:</label>
+                <input type="checkbox" id="lightSwitch" name="lightSwitch"
+                    onchange="controlDevice('light', this.checked)">
+            </div>
+            <div class="device-control">
+                <label for="thermostat">Thermostat:</label>
+                <input type="range" id="thermostat" name="thermostat" min="16" max="30"
+                    onchange="controlDevice('thermostat', this.value)">
+                <span id="thermostatValue">22°C</span>
+            </div>
+            <div class="device-control">
+                <label for="fanSwitch">Fan:</label>
+                <input type="checkbox" id="fanSwitch" name="fanSwitch" onchange="controlDevice('fan', this.checked)">
+            </div>
+        </div>
+        <div class="section">
+            <h2>Sensor Readings</h2>
+            <div class="sensor-reading">
+                <p>Temperature: <span id="temperature">--°C</span></p>
+            </div>
+            <div class="sensor-reading">
+                <p>Humidity: <span id="humidity">--%</span></p>
+            </div>
+            <div class="sensor-reading">
+                <p>Energy Consumption: <span id="energy">-- kWh</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

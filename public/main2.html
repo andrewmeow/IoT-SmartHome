@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Main</title>
+    <link rel="stylesheet" href="main2.css">
+    <link rel="shortcut icon" href="Иконка.png">
+</head>
+<body>
+    <header>
+        <button id="devicesBtn">Devices</button>
+        <button id="roomsBtn">Rooms</button>
+        <button id="settingsBtn">Settings</button>
+        <button id="logoutBtn">Exit</button>
+    </header>
+        <div class="add-device">
+            <form id="addDeviceForm">
+            <input type="text" id="deviceNameInput" name="deviceName" placeholder="Enter device name" required>
+            <select id="deviceTypeSelect" name="deviceType" required>
+                <option value="" selected disabled>Choose device type</option>
+                <option value="1">Лампочка</option>
+                <option value="2">Кондиционер</option>
+                <option value="3">Умная розетка</option>
+                <option value="4">Умный замок</option>
+            </select>
+                <select id="roomSelect" name="room" required>
+                    <option value="" selected disabled>Choose room</option>
+                    <!-- Здесь будут отображаться комнаты -->
+                </select>
+                <button type="submit">Add Device</button>
+            </form></div>
+        <!-- Блок с добавлением устройств -->
+        <div class="device-container">
+            <div class="device-block">
+
+                <p id="errorDeviceMessage" class="error-message"></p>
+            </div>
+        </div>
+
+    <div class="rooms" style = "display:none">
+        <ul id="roomList">
+        </ul>
+        <form id="addRoomForm">
+            <input type="text" id="roomNameInput" name="roomName" placeholder="Enter room name" required>
+            <button type="submit">Add Room</button>
+        </form>
+        <p id="errorMessage" class="error-message"></p>
+    </div>
+
+
+    <div class="settings" id="settingsList" style = "display:none">
+        <h2>Settings</h2>
+        <form id="settingsForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Save</button>
+        </form>
+        <p id="settingsMessage" class="message"></p>
+    </div>
+
+    <script>
+        // Получаем кнопку "Settings"
+        const settingsBtn = document.getElementById('settingsBtn');
+        // Получаем блок с настройками
+        const settingsList = document.getElementById('settingsList');
+
+        // Добавляем обработчик события при клике на кнопку "Settings"
+        settingsBtn.addEventListener('click', () => {
+            // Показываем или скрываем блок настроек при клике на кнопку
+            if (settingsList.style.display === 'none') {
+                settingsList.style.display = 'block';
+            } else {
+                settingsList.style.display = 'none';
+            }
+        });
+    </script>
+    <script src="main2.js"></script>
+</body>
+</html>
